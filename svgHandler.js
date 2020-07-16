@@ -27,22 +27,22 @@ var faces_new;
 async function setupPaper() {
   if (!paper_already_setup) {
     window.webkit.messageHandlers.callback.postMessage("Installing paper...");
-    svgScope = await SVGUtils.importSVG(svg);
-    skeleton = new Skeleton(svgScope);
+//     svgScope = await SVGUtils.importSVG(svg);
+//     skeleton = new Skeleton(svgScope);
 
-    var canvas = document.getElementById("_canvas");
-    canvasWidth = window.innerWidth;
-    canvasHeight = window.innerHeight;
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
+//     var canvas = document.getElementById("_canvas");
+//     canvasWidth = window.innerWidth;
+//     canvasHeight = window.innerHeight;
+//     canvas.width = canvasWidth;
+//     canvas.height = canvasHeight;
   
-    canvasScope = new paper.PaperScope();
-    canvasScope.activate()
-    canvasScope.setup(canvas)
+//     canvasScope = new paper.PaperScope();
+//     canvasScope.activate()
+//     canvasScope.setup(canvas)
     
-    illustration = new PoseIllustration(canvasScope);
-    illustration.bindSkeleton(skeleton, svgScope);
-    paper_already_setup = true;
+//     illustration = new PoseIllustration(canvasScope);
+//     illustration.bindSkeleton(skeleton, svgScope);
+//     paper_already_setup = true;
     window.webkit.messageHandlers.callback.postMessage("Installed paper.");
   }
 }
