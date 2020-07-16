@@ -30,7 +30,7 @@ async function setupPaper() {
     svgScope = await SVGUtils.importSVG(svg);
     skeleton = new Skeleton(svgScope);
 
-    var canvas = document.getElementById("_canvas");
+    var canvas = document.getElementById("canvas");
     canvasWidth = window.innerWidth;
     canvasHeight = window.innerHeight;
     canvas.width = canvasWidth;
