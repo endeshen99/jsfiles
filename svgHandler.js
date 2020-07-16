@@ -17,7 +17,7 @@ var svgScope;
 
 var skeleton;
 
-var svg = document.getElementById("Layer_1");
+var svg = document.getElementById("svg");
 svg.parentNode.removeChild(svg);
 
 var illustration;
