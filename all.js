@@ -1512,7 +1512,7 @@ async function setupPaper() {
     svgScope = await SVGUtils.importSVG(svg);
     skeleton = new Skeleton(svgScope);
 
-    var canvas = document.getElementById("_canvas");
+    var canvas = document.getElementById("canvas");
     canvasWidth = window.innerWidth;
     canvasHeight = window.innerHeight;
     canvas.width = canvasWidth;
@@ -1526,6 +1526,7 @@ async function setupPaper() {
     illustration.bindSkeleton(skeleton, svgScope);
     paper_already_setup = true;
     window.webkit.messageHandlers.callback.postMessage("Installed paper.");
+    return "";
   }
 }
 
@@ -1544,6 +1545,7 @@ function drawAnimatedPerson(poses, faces) {
   illustration.draw(canvasScope, canvasWidth, canvasHeight);
   canvasScope.project.activeLayer.scale(1, 1, new canvasScope.Point(0, 0));
   window.webkit.messageHandlers.callback.postMessage("Drawing Done.");
+  return "";
 }
 
 window.webkit.messageHandlers.callback.postMessage("handler loaded");
