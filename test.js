@@ -1,8 +1,4 @@
     window.webkit.messageHandlers.callback.postMessage("Installing paper...");
-    svgScope = await SVGUtils.importSVG(svg);
-    skeleton = new Skeleton(svgScope);
-
-    window.webkit.messageHandlers.callback.postMessage("Installing paper...");
 
     var canvas = document.getElementById("canvas");
 
