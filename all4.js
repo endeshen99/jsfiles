@@ -1537,8 +1537,8 @@ async function setupPaper() {
 
 function drawAnimatedPerson(poses, faces) {
   window.webkit.messageHandlers.callback.postMessage("Drawing...");
-  poses_new = poses;
-  faces_new = faces;
+  poses_new = JSON.parse(poses);
+  faces_new = JSON.parse(faces);
   canvasScope.project.clear();
   if (Object.keys(faces).length != 0) {
     face = Skeleton.toFaceFrame(faces);
